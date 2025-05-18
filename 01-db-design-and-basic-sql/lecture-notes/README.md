@@ -40,4 +40,5 @@ The Database Design and Basic SQL in PostgreSQL course by UMich through Coursera
 
 ---
 
-## 
+## Introduction to Relational Database Design
+
