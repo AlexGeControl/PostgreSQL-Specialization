@@ -43,7 +43,7 @@ docker run -it --rm --network postgres-network postgres psql -h pgsql-server -U 
 # Database: pg4e_87d51122eb 
 # User:     pg4e_87d51122eb 
 # Password: pg4e_p_92c9c1bc0099645
-docker run -it --rm postgres psql -h pg.pg4e.com -p 5432 -U pg4e_87d51122eb pg4e_87d51122eb
+docker run -it --rm -v $PWD/assignments/scripts:/workspace postgres psql -h pg.pg4e.com -p 5432 -U pg4e_87d51122eb pg4e_87d51122eb
 ```
 
 ---
@@ -97,4 +97,56 @@ pg4e_87d51122eb=> \i /scripts/auto-updated-at.sql
 CREATE TABLE
 CREATE FUNCTION
 CREATE TRIGGER
+```
+
+---
+
+## Module 3
+
+### Generating Text
+
+See the PGSQL script at [here](scripts/generate-text.sql)
+
+---
+
+## Module 3
+
+### Q1. Regex Match
+
+- **Target Pattern** Lines that end with with 4 or more digits
+
+```bash
+# connect to target database:
+# Host:     pg.pg4e.com 
+# Port:     5432 
+# Database: readonly 
+# User:     readonly 
+# Password: secret_pg4e
+docker run -it --rm -v $PWD/scripts:/scripts postgres psql -h pg.pg4e.com -p 5432 -U readonly readonly
+```
+
+Target table schema:
+
+```pgsql
+readonly=# \d+ taxdata
+  Column  |          Type          |
+----------+------------------------+
+ id       | integer                |
+ ein      | integer                |
+ name     | character varying(255) |
+ year     | integer                |
+ revenue  | bigint                 |
+ expenses | bigint                 |
+ purpose  | text                   |
+ ptid     | character varying(255) |
+ ptname   | character varying(255) |
+ city     | character varying(255) |
+ state    | character varying(255) |
+ url      | character varying(255) |
+```
+
+The answer SQL statement is as follows:
+
+```pgsql
+SELECT purpose FROM taxdata WHERE purpose ~ '^.*(\d{4,})$';
 ```

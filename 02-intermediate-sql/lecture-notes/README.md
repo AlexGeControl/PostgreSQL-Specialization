@@ -27,3 +27,5 @@ Specifically, students will do assignments that
 ## Topics
 
 - [SQL: Beyond CRUD](beyond-crud.md)
+- [Text Utilities](text.md)
+- [Regular Expressions](regex.md)
