@@ -29,4 +29,4 @@ Click [here](http://pg4e.com/lectures/05-FullText.php)
 ## Topics
 
 - [Inverted Index](inverted-index.md)
-- [Python PostgreSQL Connector](psycopg2.md)
+- [Python PostgreSQL Connector](references/psycopg/workspace/README.md)
