@@ -1,0 +1,43 @@
+[project]
+name = "json-postgres"
+version = "0.1.0"
+description = "Introduction to JSON in PostgreSQL."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "psycopg[binary,pool]>=3.2.9",
+    "python-dotenv>=1.1.0",
+    "redis>=6.2.0",
+    "requests>=2.32.4",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+]
+
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = [
+    "test_*.py", 
+]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--verbose",
+    "--tb=short",
+    "--strict-markers",
+]
+
+[dependency-groups]
+dev = [
+    "psycopg>=3.2.9",
+    "pytest>=8.4.1",
+    "pytest-cov>=6.2.1",
+]

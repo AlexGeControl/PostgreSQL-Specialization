@@ -30,3 +30,4 @@ Click [here](http://pg4e.com/lectures/05-FullText.php)
 
 - [Inverted Index](inverted-index.md)
 - [Python PostgreSQL Connector](references/psycopg/workspace/README.md)
+- [JSONB: PostgreSQL as NoSQL Database](json.md)
