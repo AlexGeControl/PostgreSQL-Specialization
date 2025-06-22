@@ -334,4 +334,50 @@ If multi-master is chosen:
 
 ![User Sharding Illustrated](slides/database-architecture/user-sharding-illustrated.png "User Sharding Illustrated")
 
-![Facebook Design Choices](slides/database-architecture/fb-design-challenges.png "Facebook Design Choices")
+![Facebook Design Choices](slides/database-architecture/fb-design-challenges.jpeg "Facebook Design Choices")
+
+---
+
+## The Emergence of BASE Model
+
+The BASE model for databases emerged as a response to the limitations of ACID (Atomicity, Consistency, Isolation, Durability) databases, particularly in the context of distributed systems and the need for high availability and scalability.
+
+![Basic Principles of BASE](slides/database-architecture/basic-principles-of-BASE.png "Basic Principles of BASE")
+
+### NoSQL Database Catalog
+
+![Open-Source Overview](slides/database-architecture/open-source-nosql-db-overview.png "Open-Source Overview")
+
+![Proprietary Overview](slides/database-architecture/proprietary-nosql-db-overview.png "Proprietary Overview")
+
+### The New Web Application Paradigm
+
+![The New Web APP Architecture](slides/database-architecture/the-new-web-app-architecture.png "The New Web APP Architecture")
+
+### ACID + BASE
+
+![BASE Features in ACID Database](slides/database-architecture/BASE-features-in-ACID-db.png "BASE Features in ACID Database")
+
+![The Merger between ACID and BASE](slides/database-architecture/the-merger-between-ACID-and-BASE.png "The Merger between ACID and BASE")
+
+![Lessons Learned](slides/database-architecture/lessons-learned.png "Lessons Learned")
+
+### The Polyglot Persistence
+
+![The Polyglot Persistence](slides/database-architecture/the-polyglot-persistence.png "The Polyglot Persistence")
+
+### BASE Dev in ACID Database
+
+![BASE Dev in ACID Database](slides/database-architecture/BASE-dev-in-ACID-db.png "BASE Dev in ACID Database")
+
+![BASE Dev in ACID Database](slides/database-architecture/BASE-dev-in-ACID-db-cont.png "BASE Dev in ACID Database")
+
+### Wrap-Up
+
+![Wrap-Up](slides/database-architecture/wrap-up.png "Wrap-Up")
+
+Use well-established ACID database in a BASE way is the best approach to BASE database because
+
+- The well established database has already been scaled to production grade
+
+- BASE can be achieved through refraining from using those ACID operations
